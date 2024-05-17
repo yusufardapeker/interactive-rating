@@ -1,0 +1,166 @@
+// Colors
+$orange: hsl(25, 97%, 53%);
+
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+
+body {
+	font-size: 15px;
+	font-family: "Overpass", sans-serif;
+	background-color: $very-dark-blue;
+	color: $medium-grey;
+}
+
+h2 {
+	color: $white;
+	font-weight: 500;
+}
+
+.container {
+	max-width: 430px;
+	width: 88%;
+	margin: 72px auto;
+	background-color: $dark-blue;
+	padding: 32px 16px;
+	border-radius: 8px;
+
+	.rating-state {
+		.icon-star {
+			background-color: $very-dark-blue;
+			padding: 6px;
+			border-radius: 50%;
+			margin-bottom: 16px;
+		}
+
+		.rating-texts {
+			&-title {
+				margin-bottom: 8px;
+			}
+
+			&-description {
+				line-height: 1.4;
+				margin-bottom: 24px;
+			}
+		}
+
+		.rating-numbers {
+			display: flex;
+			margin: 12px 0;
+			justify-content: space-around;
+			margin-bottom: 20px;
+
+			.rating-number {
+				background-color: $very-dark-blue;
+				padding: 10px 18px;
+				border-radius: 50%;
+				cursor: pointer;
+				transition: background-color 200ms;
+
+				&:hover {
+					background-color: $light-grey;
+					color: $white;
+				}
+
+				&.selected {
+					background-color: $orange;
+					color: $white;
+				}
+			}
+		}
+
+		.rating-btn {
+			background-color: $orange;
+			width: 100%;
+			padding: 12px 0;
+			color: $white;
+			border-radius: 16px;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			font-weight: 700;
+		}
+	}
+
+	.thank-state {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 20px;
+		display: none;
+
+		.chosen-number-text {
+			background-color: $very-dark-blue;
+			padding: 8px 16px;
+			border-radius: 9999px;
+			color: $orange;
+		}
+
+		.thank-texts {
+			&-title {
+				margin-bottom: 12px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
+
+	.container {
+		padding: 32px 28px;
+		border-radius: 16px;
+
+		.rating-state {
+			.icon-star {
+				width: 44px;
+				padding: 12px;
+			}
+
+			.rating-texts {
+				&-title {
+					font-size: 40px;
+				}
+				&-description {
+					font-size: 16px;
+				}
+			}
+
+			.rating-numbers {
+				.rating-number {
+					font-size: 20px;
+				}
+			}
+			.rating-btn {
+				font-size: 18px;
+			}
+		}
+
+		.thank-state {
+			.thank-icon {
+				margin-bottom: 16px;
+			}
+
+			.chosen-number-text {
+				font-size: 18px;
+			}
+
+			.thank-texts {
+				&-title {
+					font-size: 36px;
+				}
+
+				&-description {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
