@@ -2,6 +2,8 @@
 
 This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI).
 
+[The Website](https://interactive-rating5039.netlify.app/)
+
 ### Built with
 
 - SASS
